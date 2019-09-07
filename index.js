@@ -34,7 +34,7 @@ var root = {
 const app = express();
 
 app.use(
-  "/graphql",
+  "/",
   graphqlHTTP({
     schema: schema,
     rootValue: root,
@@ -42,6 +42,4 @@ app.use(
   })
 );
 
-app.listen(4000, () =>
-  console.log("server is runnig on localhost:4000/graphql")
-);
+app.listen(4000, () => console.log("server is runnig on localhost:4000"));
