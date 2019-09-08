@@ -14,7 +14,9 @@ var schema = buildSchema(`
 // The root provides a resolver function for each API endpoint
 var root = {
   quoteOfTheDay: () => {
-    return Math.random() < 0.5 ? "Take it easy" : "Salvation lies within";
+    return Math.random() < 0.5
+      ? "Take it easy"
+      : "Salvation lies within, you can do better";
   },
   random: () => {
     return Math.random();
